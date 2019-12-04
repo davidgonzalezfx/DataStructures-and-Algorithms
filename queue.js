@@ -25,10 +25,32 @@ function enQueue(val) {
     console.log(`${val} was inserted in ${values.indexOf(val)} position`);
   }
 }
+
+function deQueue() {
+  if (front == -1) {
+    console.log(`Queue is empty`);
+  } 
+  else {
+    console.log(`Value ${values[front]} deleted`);
+    values[front] = undefined
+    front++
+    if (front > rear) {
+      front = rear = -1
+      console.log("The las item was deleted");
+    }
+  }
+}
+
 enQueue(1);
 enQueue(2);
 enQueue(3);
 enQueue(4);
 enQueue(5);
 enQueue(6);
+deQueue()
+deQueue()
+deQueue()
+deQueue()
+deQueue()
+deQueue()
 Show();
