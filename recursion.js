@@ -5,5 +5,9 @@ function factorial(num) {
   return (num * factorial(num-1))
 }
 let inpt = parseInt(prompt("Type number greater than 0"))
-
-console.log(factorial(inpt));
+if (inpt < 0) {
+  confirm("Your number is smaller than 0")
+}
+else {
+  console.log(factorial(inpt));
+}
