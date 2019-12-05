@@ -8,7 +8,9 @@ class Queue {
     this.info.forEach(value => {
       this.output += " " + value;
     });
+    console.log(`---`);
     console.log(`Array = ${this.output}`);
+    console.log(`---`);
     this.output = ""
   }
   enQueue(value) {
@@ -35,19 +37,25 @@ class Queue {
 
 }
 let q1 = new Queue(5);
-console.log(" ");
 q1.printInfoInLine();
-console.log(" ");
 q1.enQueue(1)
 q1.enQueue(2)
 q1.enQueue(3)
 q1.enQueue(4)
 q1.enQueue(5)
+q1.printInfoInLine();
+q1.deQueue()
+q1.deQueue()
 q1.enQueue(6)
+q1.enQueue(7)
+q1.printInfoInLine();
+q1.enQueue(8)
 q1.printInfoInLine();
 q1.deQueue()
 q1.deQueue()
 q1.deQueue()
 q1.deQueue()
 q1.deQueue()
+q1.printInfoInLine();
 q1.deQueue()
+q1.printInfoInLine();
