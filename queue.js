@@ -6,8 +6,10 @@ function Show() {
   values.forEach(value => {
     show += " " + value;
   });
+  console.log(`---`);
   console.log(`Array = ${show}`);
   console.log(`Front = ${front} Rear = ${rear}`);
+  console.log(`---`);
   show = ""
 }
 Show();
@@ -32,8 +34,11 @@ function deQueue() {
   } 
   else {
     console.log(`Value ${values[front]} deleted`);
-    values[front] = undefined
-    front++
+    for(let i=0; i < SIZE-1; i++){
+      values[i] = values[i+1]
+    }
+    values[values.length-1] = undefined
+    rear--
     if (front > rear) {
       front = rear = -1
       console.log("The las item was deleted");
@@ -46,11 +51,19 @@ enQueue(2);
 enQueue(3);
 enQueue(4);
 enQueue(5);
-enQueue(6);
-deQueue()
-deQueue()
-deQueue()
-deQueue()
+Show();
 deQueue()
 deQueue()
 Show();
+enQueue(6);
+enQueue(7);
+Show();
+enQueue(8);
+Show();
+deQueue()
+deQueue()
+deQueue()
+deQueue()
+deQueue()
+deQueue()
+Show()
