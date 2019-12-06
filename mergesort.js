@@ -18,8 +18,9 @@ function merge(arrLeft, arrRight) {
       sort_array.push(arrLeft.shift())
     }
   }
-  return [...sort_array]
+  return sort_array
 }
 
 let array = [8, 2, 7, 3, 23, 50, 0, 1]
-console.log(`\n-FINAL: ${merge_sort(array)}- - -`);
+console.log(array);
+console.log(merge_sort(array));

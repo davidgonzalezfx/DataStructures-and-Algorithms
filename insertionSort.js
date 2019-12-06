@@ -1,5 +1,5 @@
-//BubbleSort
-function insertionSort() {
+//Insertion
+function insertionSort(values) {
   for (let i = 1; i < values.length; i++) {
     let tmp = values[i]
     let j = i-1
@@ -8,9 +8,9 @@ function insertionSort() {
     }
     values[j+1] = tmp
   }
+  return values
 }
 // Main
-values = [6,4,3,11,10]
+let values = [6,4,3,11,10]
 console.log(values);
-insertionSort()
-console.log(values);
+console.log(insertionSort(values))
